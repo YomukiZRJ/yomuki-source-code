@@ -1,0 +1,31 @@
+{
+  "name": "yomuki-omit",
+  "version": "1.0.0",
+  "description": "omit",
+  "license": "ISC",
+  "author": "Yomuki<yomuki@qq.com>",
+  "main": "lib/index.js",
+  "module": "es/index.js",
+  "types": "index.d.ts",
+  "files": [
+    "lib",
+    "es",
+    "dist",
+    "index.d.ts"
+  ],
+  "scripts": {
+    "build": "father build",
+    "coverage": "father test --coverage",
+    "dev": "node src/index.js",
+    "lint": "eslint .",
+    "prepublishOnly": "npm run build && np --yolo --no-publish",
+    "test": "father test"
+  },
+  "dependencies": {
+    "father": "^2.30.21"
+  },
+  "devDependencies": {
+    "@umijs/fabric": "^3.0.0",
+    "assert": "^2.0.0"
+  }
+}
