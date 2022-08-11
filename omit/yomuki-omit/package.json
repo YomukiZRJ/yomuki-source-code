@@ -2,7 +2,7 @@
   "name": "yomuki-omit",
   "version": "1.0.0",
   "description": "omit",
-  "license": "ISC",
+  "license": "MIT",
   "author": "Yomuki<yomuki@qq.com>",
   "main": "lib/index.js",
   "module": "es/index.js",
@@ -21,11 +21,9 @@
     "prepublishOnly": "npm run build && np --yolo --no-publish",
     "test": "father test"
   },
-  "dependencies": {
-    "father": "^2.30.21"
-  },
   "devDependencies": {
     "@umijs/fabric": "^3.0.0",
-    "assert": "^2.0.0"
+    "assert": "^2.0.0",
+    "father": "^2.30.21"
   }
 }
