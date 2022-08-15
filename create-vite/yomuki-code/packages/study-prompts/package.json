@@ -1,0 +1,16 @@
+{
+  "name": "study-prompts",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "devp": "node index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "kolorist": "^1.5.1",
+    "prompts": "^2.4.2"
+  }
+}

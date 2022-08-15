@@ -1,0 +1,12 @@
+{
+  "name": "yomuki-code",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "<!--  * @Desc:   * @Author: 曾茹菁  * @Date: 2022-08-14 09:20:24  * @LastEditors: 曾茹菁  * @LastEditTime: 2022-08-14 09:43:50 --> # create-vite 源码解读笔记 - 本文参加了由[公众号@若川视野](https://lxchuan12.gitee.io/) 发起的每周源码共读活动，[点击了解详情一起参与](https://juejin.cn/post/7079706017579139102)。 - 这是源码共读的第37期，链接：[【若川视野 x 源码共读】第37期 | vite 3.0 都发布了，这次来手撕 create-vite 源码](https://juejin.cn/post/7129087028947320862/)。 - [create-vite 源码](https://github.com/vitejs/vite/blob/HEAD/packages/create-vite/index.js) ## 相关依赖 - [fs](https://nodejs.org/dist/latest-v18.x/docs/api/fs.html) 处理文件 ```js import fs from \" node:fs\"; ``` - [path](https://nodejs.org/dist/latest-v18.x/docs/api/path.html)  处理路径 ```js import path from 'node:path'; ``` - [url.fileURLToPath](https://nodejs.org/dist/latest-v18.x/docs/api/url.html) 将文件 URL 字符串或 URL 对象转为路径。解码百分比编码的字符以及确保跨平台有效的绝对路径字符串。 ```js import { fileURLToPath } from 'node:url' ``` - [minimist](https://www.npmjs.com/package/minimist) 命令行参数解析 ```js import minimist from 'minimist' ``` - [prompts](https://www.npmjs.com/package/prompts)  美观、人性化的cli交互页面 ```js import prompts from 'prompts' ```",
+  "main": "index.js",
+  "scripts": {
+    "dev": "pnpm run dev --filter '*'"
+  },
+  "author": "",
+  "license": "ISC"
+}
