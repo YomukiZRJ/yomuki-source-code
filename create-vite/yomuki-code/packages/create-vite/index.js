@@ -3,7 +3,7 @@
  * @Author: 曾茹菁
  * @Date: 2022-08-14 09:28:51
  * @LastEditors: 曾茹菁
- * @LastEditTime: 2022-08-15 14:43:00
+ * @LastEditTime: 2022-08-15 14:55:20
  */
 /**
  * 处理文件的读写、复制、删除、重命名等操作。
@@ -158,7 +158,8 @@ const TEMPLATES = FRAMEWORKS.map(
   (f) => (f.variants && f.variants.map((v) => v.name)) || [f.name]
 ).reduce((a, b) => a.concat(b), []);
 /**
- * 需要重命名的文件
+ * 需要在项目中重命名的文件
+ * 有些系统.开头的文件读不到
  */
 const renameFiles = {
   _gitignore: ".gitignore",
@@ -309,6 +310,7 @@ async function init() {
   };
   // 读取模板目录内容
   const files = fs.readdirSync(templateDir);
+  console.log(files);
   // 循环写入，过滤package.json
   for (const file of files.filter((f) => f !== "package.json")) {
     write(file);

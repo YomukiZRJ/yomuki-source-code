@@ -3,7 +3,7 @@
  * @Author: 曾茹菁
  * @Date: 2022-08-14 09:20:24
  * @LastEditors: 曾茹菁
- * @LastEditTime: 2022-08-15 14:48:35
+ * @LastEditTime: 2022-08-15 14:53:15
 -->
 # create-vite 源码解读笔记
 - 本文参加了由[公众号@若川视野](https://lxchuan12.gitee.io/) 发起的每周源码共读活动，[点击了解详情一起参与](https://juejin.cn/post/7079706017579139102)。
@@ -46,6 +46,7 @@ import {
 ## 主函数 - 前置部分
 - targetDir 目标文件夹
 ```js
+const argv = minimist(process.argv.slice(2), { string: ["_"] });
 // 项目名（创建的文件夹名） -- 创建时的第一个参数
 let targetDir = formatTargetDir(argv._[0]);
 // 默认名
