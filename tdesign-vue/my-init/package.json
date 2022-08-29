@@ -1,0 +1,12 @@
+{
+  "name": "my-init",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "init": "node init/"
+  },
+  "author": "",
+  "license": "ISC"
+}
